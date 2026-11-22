@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sort Quest</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="blobs"></div>
+<main>
+  <nav class="tabs"><button class="tab on" data-t="play">🎮 Play</button><button class="tab" data-t="lab">🐍 Python Lab</button><button class="snd" id="mute" title="Sound on/off">🔊</button></nav>
+
+  <section id="play">
+    <div class="top"><span id="lvl"></span><span id="hearts"></span><span id="score"></span></div>
+    <div class="algs" id="algs"></div>
+    <header><span class="pill" id="ep"></span><h1 id="ttl"></h1><p id="sub"></p></header>
+    <section class="card" id="intro"></section>
+    <section id="game" hidden>
+      <div id="stage"></div><div class="ground"></div>
+      <div id="msg"></div><div id="ctl"></div>
+      <div class="card">
+        <div class="chips"><span class="chip" id="s1"></span><span class="chip" id="s2"></span><span class="chip" id="s3"></span><span class="chip k" id="s4"></span></div>
+        <div class="dual"><div id="mini"></div><pre id="pcode"></pre></div>
+        <div style="text-align:center"><button class="ghost" id="tolab">🐍 Try this algorithm in Python Lab</button></div>
+      </div>
+    </section>
+  </section>
+
+  <section id="lab" hidden>
+    <div class="card">
+      <h2>🐍 Python Lab</h2>
+      <p class="mut">Write a function called <code>sort(a)</code>, then hit Run or Test. Python runs right in your browser.</p>
+      <div class="bar">
+        <select id="tpl"></select>
+        <button id="run">▶ Run</button><button id="test" class="alt">✔ Test sort()</button><button id="stop" class="ghost">■ Stop</button>
+      </div>
+      <div id="pstat" class="mut"></div>
+      <textarea id="code" spellcheck="false"></textarea>
+      <pre id="out"></pre>
+    </div>
+  </section>
+</main>
+<!-- Order matters: each file uses things defined in the files above it. -->
+<script src="js/utils.js"></script>
+<script src="js/config.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/algorithms.js"></script>
+<script src="js/levels.js"></script>
+<script src="js/python-templates.js"></script>
+<script src="js/game.js"></script>
+<script src="js/auto.js"></script>
+<script src="js/lab.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
